@@ -1,0 +1,25 @@
+.mollo-module .success {
+  color: green;
+}
+.mollo-module .failed {
+  color: red;
+}
+.mollo-module .css-test {
+  color: green;
+}
+.mollo-module table.twig-variable-test th {
+  margin: 0;
+  padding: 0.5rem;
+  height: 1rem;
+}
+.mollo-module table.twig-variable-test td {
+  margin: 0;
+  padding: 0.5rem;
+  height: 1rem;
+}
+.mollo-module table.twig-variable-test td.failed {
+  color: white;
+  background-color: red;
+}
+
+/*# sourceMappingURL=mollo-module.css.map */

@@ -1,0 +1,7 @@
+page:
+  path: '/mollo-module'
+  defaults:
+    _controller: '\Drupal\mollo_module\Controller\MolloModuleController::page'
+    _title: 'Mollo Module Template'
+  requirements:
+    _permission: 'access content'

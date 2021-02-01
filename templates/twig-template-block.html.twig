@@ -1,0 +1,31 @@
+{# ------------------------------------------------ #}
+{#      Mollo Module Twig Template Block                                       #}
+{# ------------------------------------------------ #}
+
+
+{# For twig Variable suggestion #}
+{# @var mollo_block \Drupal\mollo_module\Controller\MolloModuleController #}
+
+{{ attach_library('mollo_module/block') }}
+
+
+{% set test = mollo_block.test ? 'success':'failed' %}
+
+<div {{ attributes }}>
+
+  <div class="system-status-general-info__description">
+    Twig Variable Test <br>
+    <code>Plugin:Block / html.twig</code>
+  </div>
+
+  <table class="twig-variable-test {{ test }}">
+    <tr>
+      <th>Foo:</th>
+      <td class="{{ test }}">{{ mollo_block.foo }}</td>
+    </tr>
+    <tr>
+      <th>Bar:</th>
+      <td class="{{ test }}">{{ mollo_block.bar }}</td>
+    </tr>
+  </table>
+</div>

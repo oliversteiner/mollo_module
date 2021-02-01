@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Contains mollo_module.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mollo_module_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mollo_module module.
+    case 'help.page.mollo_module':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Mollo Module Template') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function mollo_module_theme() {
+
+  return [
+    'twig_template_block' => [
+      'variables' => [
+        'attributes' => [],
+        'mollo_block' => [],
+      ],
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function mollo_module_page_attachments(array &$attachments) {
+  $roles = \Drupal::currentUser()->getRoles();
+
+  if (in_array('administrator', $roles, TRUE)) {
+    $attachments['#attached']['library'][] = 'mollo_module/main';
+  }
+}

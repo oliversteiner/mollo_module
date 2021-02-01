@@ -1,0 +1,26 @@
+#
+#   Main
+#-----------------------#
+main:
+  css:
+    theme:
+      assets/css/mollo-module.css: {}
+  js:
+    assets/js/mollo_module.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+#
+#   Block
+#-----------------------#
+block:
+  css:
+    theme:
+      assets/css/mollo-module.css: { }
+#
+#   Test
+#-----------------------#
+test:
+  css:
+    theme:
+      assets/css/mollo-module.css: { }

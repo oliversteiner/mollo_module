@@ -1,0 +1,37 @@
+@import '_variables';
+
+
+.mollo-module {
+
+  .success {
+    color: green;
+  }
+
+  .failed {
+    color: red;
+  }
+
+  .css-test {
+    color: green;
+  }
+
+  table.twig-variable-test{
+    th{
+      margin: 0;
+      padding: 0.5rem;
+      height: 1rem;
+
+    }
+    td{
+      margin: 0;
+      padding: 0.5rem;
+      height: 1rem;
+      &.failed{
+        color: white;
+        background-color: red;
+      }
+    }
+
+  }
+
+}

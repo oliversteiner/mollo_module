@@ -1,0 +1,111 @@
+{# ------------------------------------------------ #}
+{# Mollo Module Template Page #}
+{# ------------------------------------------------ #}
+
+{# For twig Variable suggestion #}
+{# @var mollo_page \Drupal\mollo_module\Controller\MolloModuleController:page #}
+
+{#  {{ dd(_context) }}  #}
+
+{{ attach_library('mollo_module/main') }}
+
+{% set test = mollo_page.test ? 'success':'failed' %}
+
+{# for jQuery.one you need one Element with a ID #}
+<div class="mollo-module" id="mollo-module">
+
+  <div class="system-status-general-info">
+    <div class="system-status-general-info__items">
+
+      {# ------------------------------------------------ #}
+      {# CSS Test #}
+      {# ------------------------------------------------ #}
+      <div class="system-status-general-info__item card">
+        <span class="system-status-general-info__item-icon "></span>
+        <div class="system-status-general-info__item-details">
+          <h3 class="system-status-general-info__item-title">CSS</h3>
+          <div class="system-status-general-info__description">
+            <span class="css-test">This text should be green</span>
+          </div>
+        </div>
+      </div>
+
+
+      {# ------------------------------------------------ #}
+      {# Mollo Module JS Test #}
+      {# ------------------------------------------------ #}
+      <div class="system-status-general-info__item card">
+        <span class="system-status-general-info__item-icon "></span>
+        <div class="system-status-general-info__item-details">
+          <h3 class="system-status-general-info__item-title">Javascript</h3>
+          <div class="system-status-general-info__description">clicking this Button should iterate only one by one
+          </div>
+          <div>
+            <a href="#" role="button" class=" button button--small button--primary mollo-module-test-1-trigger">Click
+              me</a>
+            <span class="mollo-module-test-1-result">0</span>
+          </div>
+        </div>
+      </div>
+
+
+      {# ------------------------------------------------ #}
+      {# Twig Variable Test #}
+      {# ------------------------------------------------ #}
+      <div class="system-status-general-info__item card">
+        <span class="system-status-general-info__item-icon "></span>
+        <div class="system-status-general-info__item-details">
+          <h3 class="system-status-general-info__item-title">Twig Variables </h3>
+          <div class="system-status-general-info__description">
+             Twig Variable Test <br>
+            <code>Controller:page</code>
+          </div>
+            <table class="twig-variable-test {{ test }}">
+              <tr>
+                <th>Foo:</th>
+                <td class="{{ test }}">{{ mollo_page.foo }}</td>
+              </tr>
+              <tr>
+                <th>Bar:</th>
+                <td class="{{ test }}">{{ mollo_page.bar }}</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+
+
+      {# ------------------------------------------------ #}
+      {# Twig Template Block #}
+      {# ------------------------------------------------ #}
+      <div class="system-status-general-info__item card">
+        <span class="system-status-general-info__item-icon "></span>
+        <div class="system-status-general-info__item-details">
+          <h3 class="system-status-general-info__item-title">Twig Template Block</h3>
+          <div class="system-status-general-info__description">
+
+            {{ drupal_block('mollo_module_twig_template_block') }}
+
+
+          </div>
+        </div>
+      </div>
+
+
+      {# ------------------------------------------------ #}
+      {# Inline Template Block #}
+      {# ------------------------------------------------ #}
+      <div class="system-status-general-info__item card">
+        <span class="system-status-general-info__item-icon "></span>
+        <div class="system-status-general-info__item-details">
+          <h3 class="system-status-general-info__item-title">Inline Template Block</h3>
+          <div class="system-status-general-info__description">
+
+            {{ drupal_block('mollo_module_inline_template_block') }}
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
