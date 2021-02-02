@@ -55,8 +55,8 @@ class InlineTemplateBlock extends BlockBase {
    */
   private function getVariables(): array {
     $test = TRUE;
-    $foo = 'foo';
-    $bar = 'bar';
+    $foo = 'foo - Block:inline';
+    $bar = 'bar - Block:inline';
 
     return [$test, $foo, $bar];
   }

@@ -71,8 +71,8 @@ class MolloModuleController extends ControllerBase {
   private function getPageVars(): array {
 
     $test = TRUE;
-    $foo = 'Foo';
-    $bar = 'Bar';
+    $foo = 'Foo - Page';
+    $bar = 'Bar - Page';
 
     $variables['mollo_page']['test'] = $test;
     $variables['mollo_page']['foo'] = $foo;

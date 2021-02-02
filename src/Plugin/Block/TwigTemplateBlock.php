@@ -51,8 +51,8 @@ class TwigTemplateBlock extends BlockBase {
     // {# @var mollo_module \Drupal\mollo_module\Controller\MolloModuleController #}
     // at top of your twig Template
 
-    $variables['foo'] = 'foo';
-    $variables['bar'] = 'bar';
+    $variables['foo'] = 'foo - Block:Twig';
+    $variables['bar'] = 'bar - Block:Twig';
     $variables['test'] = TRUE;
 
     return $variables;
