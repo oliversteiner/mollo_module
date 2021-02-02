@@ -3,6 +3,7 @@
 namespace Drupal\mollo_module\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\mollo_module\Utils\MolloModuleTrait;
 
 
 /**
@@ -12,6 +13,8 @@ use Drupal\Core\Controller\ControllerBase;
 
  */
 class MolloModuleController extends ControllerBase {
+
+  use MolloModuleTrait;
 
   // public  Vars for Twig Var Suggestion. Use in Template via:
   // {# @var mollo_module \Drupal\mollo_module\Controller\MolloModuleController #}
@@ -23,15 +26,6 @@ class MolloModuleController extends ControllerBase {
   public $bar;
 
 
-  /**
-   * Name of our module.
-   *
-   * @return string
-   *   A module name.
-   */
-  public function getModuleName(): string {
-    return 'mollo_module';
-  }
 
 
   /**
@@ -53,16 +47,6 @@ class MolloModuleController extends ControllerBase {
     ];
   }
 
-  /**
-   * Get full path to the template.
-   *
-   * @return string
-   *   Path string.
-   */
-  protected function getTemplatePath(): string {
-    return drupal_get_path('module', $this->getModuleName()) .
-      '/templates/';
-  }
 
   /**
    * @return array
