@@ -1,3 +1,6 @@
+#
+#  Page
+#-----------------------#
 page:
   path: '/mollo-module'
   defaults:
@@ -5,3 +8,16 @@ page:
     _title: 'Mollo Module Template'
   requirements:
     _permission: 'access content'
+
+#
+#  Settings Form
+#-----------------------#
+settings:
+  path: 'admin/config/system/configuration/mollo-module'
+  defaults:
+    _form: '\Drupal\mollo_module\Form\MolloModuleSettingsForm'
+    _title: 'Mollo Module Settings Form'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

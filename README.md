@@ -1,35 +1,53 @@
-# Mollo Module Template
+# Drupal 9 Module Starter
+A Ready to use Drupal 9 Module Starter.
+
+It includes a Bash Script to automatically rename all files with your module name.
+
+## This Module give you a ready to use Example of
+- Drupal Module with file structure
+- Page Controller with Page at /your-module-name
+- Block Module with Inline Form
+- Block Module with Twig Template
+- Settings Form
+- JS / SCSS
+
+## Alternative
+If you just need a Module Skeleton please use
+
+```drush generate```
 
 
-Use this for a Drupal Starter Module
+## How to use
+```bash
+# Go to destination Path
+cd /web/modules/custom
 
-copy to /modules/custom/
-delete git directory
+# get the module
+git clone https://github.com/oliversteiner/mollo_module
+
+# rename directory mollo_module with your module_name
+mv mollo_module your_module_name
+
+# change to your module
+cd your_module_name
+
+# delete git directory:
 rm -rf .git
-rename directory 'mollo_module' with your module name
-
-### To  rename automatically all files and variables for your module name
-```
-# go to your module
-/modules/custom/your_module/
 
 # make the rename script executable
-chmod +x rename_module.sh
+chmod +x setup.sh
 
 # start script
-./rename_module.sh
+./setup.sh
+
+# enable your new module
+drush en your_module_name
 
 ```
 
 
-
-Predefined Functions:
-
-Page at /your-module-name
-
-Block:
--  Twig Template Block
--  Inline Template Block
-
-
+## Other Resources
 https://git.drupalcode.org/project/examples/-/tree/3.x/modules
+
+
+

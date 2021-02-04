@@ -1,0 +1,22 @@
+{
+    "name": "drupal/mollo_module",
+    "type": "drupal-module",
+    "description": "A Ready to use Drupal 9 Module Starter",
+    "license": "GPL-3.0+",
+    "version": "1.1.0b",
+    "keywords": [
+        "drupal",
+        "mollo",
+        "template",
+        "module",
+        "starter"
+    ],
+    "homepage": "https://github.com/oliversteiner/mollo_module",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/oliversteiner/mollo_module/issues",
+        "source": "https://github.com/oliversteiner/mollo_module"
+    },
+    "author": "Oliver Steiner, oliver@mollo.ch",
+    "require": {}
+}

@@ -1,4 +1,15 @@
+/**
+ * @file
+ * mollo_module behaviors.
+ */
+
 (function($, Drupal, drupalSettings) {
+
+  'use strict';
+
+  /**
+   * Behavior molloModule.
+   */
   Drupal.behaviors.molloModule = {
     attach(context, settings) {
       console.log('Mollo Module');

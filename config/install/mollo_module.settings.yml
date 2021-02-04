@@ -1,0 +1,10 @@
+section_checkbox:
+  foo: 1
+  bar: 1
+section_text:
+  title: Title
+  description: Descripton
+section_radio:
+  active: '0'
+section_file:
+  image_path: ''
