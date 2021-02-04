@@ -8,6 +8,10 @@
  *
  * With Help from
  * https://www.drupal.org/project/gin_login
+ *
+ * Alternative: Generate Config Form
+ * drush generate form-config
+ *
  */
 
 namespace Drupal\mollo_module\Form;
