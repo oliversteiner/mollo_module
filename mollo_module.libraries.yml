@@ -16,11 +16,11 @@ main:
 block:
   css:
     theme:
-      assets/css/mollo-module.css: { }
+      assets/css/mollo-module-block.css: { }
 #
-#   Test
+#   Form
 #-----------------------#
-test:
+form:
   css:
     theme:
-      assets/css/mollo-module.css: { }
+      assets/css/mollo-form.css: { }
