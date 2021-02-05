@@ -39,7 +39,7 @@ class MolloModuleSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'mollo_module_form';
+    return 'mollo_module_settings_form';
   }
 
   /**

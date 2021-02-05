@@ -5,6 +5,7 @@
  * Contains mollo_module.module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -48,5 +49,20 @@ function mollo_module_page_attachments(array &$attachments) {
 
   if (in_array('administrator', $roles, TRUE)) {
     $attachments['#attached']['library'][] = 'mollo_module/main';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function mollo_module_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+
+  if ($form_id === 'mollo_module_settings_form') {
+    $form['#attached']['library'][] = 'mollo_module/form';
   }
 }
