@@ -43,6 +43,11 @@ class MolloModuleController extends ControllerBase {
         '#type' => 'inline_template',
         '#template' => $template,
         '#context' => $this->getPageVars(),
+
+        // Disabling cache for this Page
+        '#cache' => [
+          'max-age' => 0,
+        ],
       ],
     ];
   }
