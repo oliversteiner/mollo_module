@@ -25,7 +25,7 @@ rename_files() {
     read -r FNAME1
   do
     echo " - $FNAME1"
-    mv "$FNAME1" "${FNAME2//$OLD_NAME/$NEW_NAME}"
+    mv "$FNAME1" "${FNAME1//$OLD_NAME/$NEW_NAME}"
   done
 
   echo "${cyan}kebab-case:${reset}"
