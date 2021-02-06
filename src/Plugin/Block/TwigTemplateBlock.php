@@ -33,6 +33,8 @@ class TwigTemplateBlock extends BlockBase {
         'id' => 'twig-template-block',
       ],
       '#mollo_block' => $variables,
+
+      // Disabling cache for this block
       '#cache' => [
         'max-age' => 0,
       ],
