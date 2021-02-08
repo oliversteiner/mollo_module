@@ -1,0 +1,26 @@
+type Page {
+  id: Int!
+  title: String
+}
+
+
+
+type Article {
+  id: Int!
+  title: String!
+  author: String
+}
+
+type ArticleConnection {
+  total: Int!
+  items: [Article!]
+}
+
+extend type Query {
+  page(id: Int!): Page
+  article(id: Int!): Article
+  articles(
+    offset: Int = 0
+    limit: Int = 10
+  ): ArticleConnection!
+}
