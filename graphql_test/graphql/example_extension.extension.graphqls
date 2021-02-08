@@ -1,8 +1,0 @@
-extend type Query {
-  page(id: Int!): Page
-  article(id: Int!): Article
-  articles(
-    offset: Int = 0
-    limit: Int = 10
-  ): ArticleConnection!
-}
