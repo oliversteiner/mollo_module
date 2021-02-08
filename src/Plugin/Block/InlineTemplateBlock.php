@@ -3,7 +3,6 @@
 namespace Drupal\mollo_module\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\node\NodeInterface;
 
 /**
  * Provides a 'Inline Template Block' block.
@@ -11,7 +10,7 @@ use Drupal\node\NodeInterface;
  * @Block(
  *  id = "mollo_module_inline_template_block",
  *  admin_label = @Translation("Inline Template Block"),
- *   category = @Translation("Mollo"),
+ *  category = @Translation("Mollo"),
  * )
  */
 class InlineTemplateBlock extends BlockBase {
@@ -51,7 +50,10 @@ class InlineTemplateBlock extends BlockBase {
   }
 
   /**
+   * Generates some Vars for Twig testing.
+   *
    * @return array
+   *   Returns Twig Vars
    */
   private function getVariables(): array {
     $test = TRUE;

@@ -1,13 +1,10 @@
 <?php
-/**
- *  Mollo Module Trait
- *
- */
-
 
 namespace Drupal\mollo_module\Utils;
 
-
+/**
+ *
+ */
 trait MolloModuleTrait {
 
   /**
@@ -16,7 +13,6 @@ trait MolloModuleTrait {
    * @return string
    *   A module name.
    */
-
   protected function getModuleName(): string {
     return 'mollo_module';
   }
